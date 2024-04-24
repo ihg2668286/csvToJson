@@ -66,7 +66,7 @@ fs.createReadStream(csvFilePath)
 
     // 선택적: 결과를 ts 파일로 저장
     fs.writeFile(
-      'output.ts',
+      'output.js',
       JSON.stringify(results, null, 2).replace(/"([^"]+)":/g, '$1:'),
       (err) => {
         if (err) throw err;
