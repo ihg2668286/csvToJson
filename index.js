@@ -64,13 +64,13 @@ fs.createReadStream(csvFilePath)
     // 모든 데이터가 처리된 후에 결과 출력
     // console.log(results);
 
-    // 선택적: 결과를 ts 파일로 저장
+    // 선택적: 결과를 js 파일로 저장
     fs.writeFile(
       'output.js',
       JSON.stringify(results, null, 2).replace(/"([^"]+)":/g, '$1:'),
       (err) => {
         if (err) throw err;
-        console.log('output.ts 파일이 생성되었습니다.');
+        console.log('output.js 파일이 생성되었습니다.');
       }
     );
   });
