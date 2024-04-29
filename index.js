@@ -25,7 +25,7 @@ fs.createReadStream(csvFilePath)
       phoneNumber: row['업무 전화번호'],
       companyEmail: row['회사 이메일'],
       companyAddr: row['회사 주소지 (권장)'],
-      position: row['직함'],
+      position: row['직함 및 직위'],
       companyName: row['회사명'],
       companyLogo:
         row[
