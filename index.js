@@ -21,15 +21,20 @@ fs.createReadStream(csvFilePath)
           '이메일 주소 오기재시 서비스 이용에 문제가 발생할 수 있으니 이 점 유의하시어 입력해 주시길 바랍니다. '
         ],
       name: row['성함'],
+      profileImage: row['프로필 이미지  (미등록 시 노출되지 않습니다.)'],
       message: row['한 줄 소개글'],
-      phoneNumber: row['업무 전화번호'],
+      phoneNumber:
+        row[
+          '업무 전화번호 (010-0000-0000,02-0000-0000등 하이픈 형식으로 작성 부탁드립니다.)'
+        ],
       companyEmail: row['회사 이메일'],
-      companyAddr: row['회사 주소지 (권장)'],
+      companyAddr:
+        row['회사 주소지 (입력 권장, 미입력시 지도 보기 기능이 빠집니다.)'],
       position: row['직함 및 직위'],
       companyName: row['회사명'],
       companyLogo:
         row[
-          '회사 로고 이미지 (미등록 시 명함에 노출되지 않으며, 신청 여부와 관계없이 배지를 발급 받을 수 없습니다.)'
+          '회사 로고 이미지 (.svg, .psd 파일로 등록 부탁드리며, 미등록 시 명함에 노출되지 않습니다. 또한 신청 여부와 관계없이 배지를 발급 받을 수 없습니다.)'
         ],
     };
 
